@@ -2,7 +2,7 @@ package stringcalculator;
 
 public class StringCalculator {
 	
-	private static String REGEX = ",";
+	private static String REGEX = ",|\\n";
 	
 	public int add(String... numbers) {
 		int result = 0;

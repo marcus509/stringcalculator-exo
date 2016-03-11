@@ -43,5 +43,14 @@ public class StringCalculatorTest {
 		// Assertions
 		assertThat(result).isEqualTo(6);
 	}
+	
+	@Test public void 
+	check_if_add_contains_slash_n() {
+		// Test
+		int result = sc.add("1\n2,3");
+
+		// Assertions
+		assertThat(result).isEqualTo(6);
+	}
 
 }

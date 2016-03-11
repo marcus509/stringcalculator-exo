@@ -1,26 +1,19 @@
 package stringcalculator;
 
 public class StringCalculator {
-
-	private static int NUMBER1 = 0;
-	private static int NUMBER2 = 0;
 	
-	public int add(String numbers) {
-		
-		if (numbers != "") {
-			String[] splitNumbers = numbers.split(",");
+	private static String REGEX = ",";
+	
+	public int add(String... numbers) {
+		int result = 0;
+		if (numbers[0] != "") {
+			String[] splitNumbers = numbers[0].split(REGEX);
 			
-			switch (splitNumbers.length) {
-				case 1: 
-					NUMBER1 = Integer.parseInt(splitNumbers[0]);
-					break;
-				case 2:
-					NUMBER1 = Integer.parseInt(splitNumbers[0]);
-					NUMBER2 = Integer.parseInt(splitNumbers[1]);
-					break;
+			for(String number : splitNumbers) {
+				result+= Integer.parseInt(number);
 			}
 		}
-		return NUMBER1 + NUMBER2;
+		return result;
 	}
 
 }

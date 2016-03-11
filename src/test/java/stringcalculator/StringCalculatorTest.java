@@ -34,5 +34,14 @@ public class StringCalculatorTest {
 		// Assertions
 		assertThat(result).isEqualTo(3);
 	}
+	
+	@Test public void 
+	check_if_add_contains_more_than_two_numbers() {
+		// Test
+		int result = sc.add("1,2,3");
+
+		// Assertions
+		assertThat(result).isEqualTo(6);
+	}
 
 }
